@@ -1,0 +1,23 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "UpdateEmployee";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="EmployeeID" />
+    <label>Kategori Adı</label>
+    <input type="text" asp-for="EmployeeName" class="form-control" />
+    <br />
+    <label>Kategori Soyadı</label>
+    <input type="text" asp-for="EmployeeSurname" class="form-control" />
+    <br />
+    <label>Kategori Açıklaması</label>
+    <input type="text" asp-for="EmployeeDescription" class="form-control" />
+    <br />
+    <label>Kategori Görsel</label>
+    <input type="text" asp-for="EmployeeImage" class="form-control" />
+    <br />
+    <button class="btn btn-success">Kategoriyi Güncelle</button>
+</form>
+
