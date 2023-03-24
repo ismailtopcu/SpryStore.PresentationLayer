@@ -1,0 +1,27 @@
+﻿@model List<Message>
+@{
+    ViewData["Title"] = "Inbox";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h1>Gelen Kutusu</h1>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <td>#</td>
+        <td>Gönderen</td>
+        <td>Konu</td>
+        <td>Mesajı Aç</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MessageID</td>
+            <td>@item.SenderMail</td>
+            <td>@item.Subject</td>
+            <td><a href="#" class="btn btn-dark">Mesajı Aç</a></td>
+        </tr>
+        
+    }
+</table>
+

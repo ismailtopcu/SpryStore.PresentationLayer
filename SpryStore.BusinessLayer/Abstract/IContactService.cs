@@ -1,4 +1,5 @@
-﻿using SpryStore.EntityLayer.Concrete;
+﻿using SpryStore.DataAccessLayer.Abstract;
+using SpryStore.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,7 @@ using System.Threading.Tasks;
 
 namespace SpryStore.BusinessLayer.Abstract
 {
-    public interface IProductService:IGenericService<Product>
+    public interface IContactService:IGenericService<Contact>
     {
-        List<Product> TGetProductListWithCategory();
     }
 }

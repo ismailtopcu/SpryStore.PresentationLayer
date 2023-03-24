@@ -36,6 +36,12 @@ namespace SpryStore.PresentationLayer
             services.AddScoped<IEmployeeDal, EfEmployeeDal>();
             services.AddScoped<IEmployeeService, EmployeeManager>();
 
+            services.AddScoped<IContactDal, EfContactDal>();
+            services.AddScoped<IContactService, ContactManager>();
+
+            services.AddScoped<ICustomerDal, EfCustomerDal>();
+            services.AddScoped<ICustomerService, CustomerManager>();
+
             services.AddControllersWithViews();
         }
 
@@ -64,6 +70,13 @@ namespace SpryStore.PresentationLayer
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                  name: "areas",
+                  pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                );
             });
         }
     }

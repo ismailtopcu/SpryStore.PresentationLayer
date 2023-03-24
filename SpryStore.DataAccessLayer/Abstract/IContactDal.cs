@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SpryStore.BusinessLayer.Abstract
+namespace SpryStore.DataAccessLayer.Abstract
 {
-    public interface IProductService:IGenericService<Product>
+    public interface IContactDal:IGenericDal<Contact>
     {
-        List<Product> TGetProductListWithCategory();
     }
 }
