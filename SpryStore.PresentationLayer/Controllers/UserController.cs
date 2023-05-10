@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace SpryStore.PresentationLayer.Controllers
 {
+    //bsoqrkheuasmwyeo
     public class UserController : Controller
     {
         private readonly UserManager<AppUser> _userManager;

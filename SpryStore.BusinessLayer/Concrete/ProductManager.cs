@@ -28,6 +28,11 @@ namespace SpryStore.BusinessLayer.Concrete
             return _productDal.GetByID(id);
         }
 
+        public List<Product> TGetLast4Product()
+        {
+            return _productDal.GetLast4Product();
+        }
+
         public List<Product> TGetList()
         {
             return _productDal.GetList();

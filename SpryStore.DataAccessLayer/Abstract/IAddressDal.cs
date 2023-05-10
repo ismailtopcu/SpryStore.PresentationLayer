@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 
 namespace SpryStore.DataAccessLayer.Abstract
 {
-    public interface IProductDal:IGenericDal<Product>
+    public interface IAddressDal:IGenericDal<Address>
     {
-        List<Product> GetProductListWithCategory();
-        List<Product> GetLast4Product();
     }
 }
